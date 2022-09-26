@@ -1,26 +1,16 @@
+import 'react-native-gesture-handler';
 import * as React from 'react';
-import { NavigationContainer } from '@react-navigation/native';
-import { createNativeStackNavigator } from '@react-navigation/native-stack';
-import HomeScreen from './src/HomeScreen';
-import DetailsScreen from './src/DetailScreen';
+import BasicExample from './src/examples/basic/BasicExample';
+import DrawerExample from './src/examples/drawer/DrawerExample';
+import TabsExample from './src/examples/tabs/TabsExample';
 
-const Stack = createNativeStackNavigator();
-
+// uncomment the components bellow to check each type of navigation
 export default function App() {
   return (
-    <NavigationContainer>
-      <Stack.Navigator>
-        <Stack.Screen 
-          name="home"
-          component={HomeScreen}
-          options={{ title: 'tela inicial 🎉' }}
-        />
-        <Stack.Screen 
-          name="details" 
-          component={DetailsScreen}
-          options={({ route }: any) => ({ title: route.params?.name })}
-        />
-      </Stack.Navigator>
-    </NavigationContainer>
+    <>
+      {/* <BasicExample /> */}
+      {/* <TabsExample /> */}
+      {/* <DrawerExample /> */}
+    </>
   );
 }
